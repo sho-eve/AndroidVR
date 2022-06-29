@@ -1,0 +1,20 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Particle : MonoBehaviour {
+
+	// Use this for initialization
+	void Start () {
+
+		//パーティクルに設定された時間より自動消滅
+		ParticleSystem particleSystem = GetComponent<ParticleSystem> ();
+		Destroy (gameObject, particleSystem.main.duration);
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
+}
